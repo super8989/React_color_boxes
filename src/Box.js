@@ -13,7 +13,14 @@ class Box extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {}
+  pickColor() {
+      let newColor = choice(this.props.allColors);
+      this.setState({ color: newColor })
+  }
+
+  handleClick() {
+      this.pickColor();
+  }
 
   render() {
     return (
